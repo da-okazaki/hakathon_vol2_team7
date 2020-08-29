@@ -1,0 +1,161 @@
+@charset "utf-8";
+html, body{
+	margin: 0;	/* 余白の削除 */
+	padding: 0;	/* 余白の削除 */
+	height: 100%;	/* 縦の高さを100% */
+	width: 100%;	/* 横の幅を100% */
+    background-color:#fce4e4;
+    color:#222222;
+}
+#wrapper {
+	position: relative;
+	min-height: 100%;
+}
+#head{
+    border-bottom:1px solid #c8c8c8;
+	background-color: #f9f9f9;
+	width:100%;
+	position: fixed;
+	top: 0px;
+	padding: 10px 0;
+	text-align:center;
+}
+#content{
+    padding-top:70px;
+    padding-bottom:80px;
+}
+#foot{
+    border-top:1px solid #c8c8c8;
+	background-color: #f9f9f9;
+	width:100%;
+	position: fixed;
+	bottom: 0px;
+	padding: 10px 0;
+}
+/* micro clearfx */
+.cf:before,
+.cf:after{
+    content: "";
+    display: table;
+}
+.cf:after{ clear: both; }
+.cf{ zoom: 1; } /* For IE 6/7 */
+
+/*heading*/
+h1{
+    width:80%;
+    font-weight:normal;
+    font-size:1.2rem;
+    margin:0 auto;
+    padding:;
+}
+h2{
+    font-weight:normal;
+    width:100%;
+    font-size:1.2rem;
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+
+/*セクション*/
+.section{
+    width:80%;
+    margin:2% auto;
+    padding:2% 1%;
+    border:1px solid #cecece;
+    border-radius: 1em;
+    box-sizing:border-box;
+    background-color:#fff;
+}
+
+/*ボタン*/
+input[type="button"] {
+   background-color:#fc5c5c;
+   border: 1px solid #fc5c5c;
+   border-radius: 0.3em;
+   color:#fff;
+   padding:2%;
+   text-decoration:underline;
+}
+
+/*インストラクターから選ぶ*/
+.instructor{
+    width:80%;
+    margin:3% auto;
+}
+.instructor select{
+    width:100%;
+    appearance: menulist;
+    border: 1px solid #c3c3c3;
+}
+
+
+/*カレンダーから探す*/
+.cal{
+    width:90%;
+    margin:0 auto;
+    background-color:#fff;
+}
+.cal_sun{
+    color:#ff2222;
+}
+.cal_sat{
+    color:#2222ff;
+}
+.cal a,
+.month a{
+    text-decoration:underline;
+}
+.month{
+    width:80%;
+    margin:0 auto;
+    text-align:center;
+}
+.month p{
+    margin:0;
+    margin-bottom:2%;
+    padding:0;
+}
+
+.month .prev{
+    width:33%;
+    float:left;
+    text-align:left;
+}
+.month .next{
+    width:33%;
+    float:left;
+    text-align:right;
+}
+.month .name{
+    width:33%;
+    float:left;
+}
+.cal td, .cal th{
+    text-align:center;
+    padding:2%;
+    border-top:1px solid #eee;
+}
+
+/*予約済*/
+.reserved.link{
+    margin:10% 0 0 auto;
+    width:100px;
+    text-align:right;
+}
+
+/*レッスンを見る*/
+.reserved.lessen{
+    margin:2% auto;
+    width:90%;
+    text-align:center;
+}
+
+/*レッスンを探す*/
+.lessen_list{
+    width:90%;
+}
+.lessen_list td.item{
+    width:30%;
+}

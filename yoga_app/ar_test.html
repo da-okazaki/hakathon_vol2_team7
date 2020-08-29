@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AliciaAnimation</title>
+  </head>
+<body style="margin:0px; overflow:hidden;">
+    <!-- ライブラリの読み込み -->
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <!-- aframe-extras読み込み -->
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
+
+        <a-assets>
+            <a-asset-item id="Alicia" src="gltf/BoxAnimated.gltf"></a-asset-item>
+            <a-asset-item id="Box" src="gltf/BoxAnimated.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-marker preset="hiro">
+            <a-entity gltf-model="#Alicia" rotation="0 180 0" position="0 0.5 0" scale="0.8 0.8 0.8">
+            </a-entity>
+        </a-marker>
+        <a-marker type='pattern' rotation="0 180 0" url='marker/pattern-marker.patt'>
+            <a-entity gltf-model="#Box" animation-mixer></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+
+    </a-scene>
+
+    <div style="position: fixed; bottom: 150px;">
+        <button type="button" id="b1">BrainStem</button>
+        <button type="button" id="b2">BoxAnimated</button>
+    </div>
+
+    <script>
+        /* global $ */
+        
+        /* a-entity */
+        var sceneEl = document.querySelector('a-scene');
+        var entity = sceneEl.querySelector('a-entity');
+        var ali = document.getElementById('Alicia');
+        
+        $(function () {
+            $('#b1').click(function (e) {
+                $('#Alicia').attr('src', 'gltf/BrainStem.gltf');
+                entity.setAttribute('src', 'gltf/BrainStem.gltf');
+                document.querySelector('a-entity').flushToDOM(true);
+                
+            });
+
+            $('#b2').click(function (e) {
+                $('#Alicia').attr('src', 'gltf/BoxAnimated.gltf');
+                entity.setAttribute('src', 'gltf/BoxAnimated.gltf');
+                document.querySelector('a-entity').flushToDOM(true);
+            });
+        });
+    </script>
+</body>
+</html>

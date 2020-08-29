@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="./css/destyle.css">
+        <link rel="stylesheet" href="./css/decfit.css">
+
+        <link rel="icon" href="./favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+
+    </head>
+    <body>
+    <div id="wrapper">
+        <div id="head">
+            <a href=""><img src="img/logo.png" width="109" height="36" alt="DEC FIT"></a>
+        </div>
+
+        <div id="content">
+            <h1>レッスンを予約済みの方</h1>
+            <div class="reserved lessen">
+                <input type="button" onclick="location.href='./lesson.html'" value="予約済のレッスン情報を見る">
+            </div>
+
+            <h1>レッスンを探す</h1>
+            <div class="section">
+                <h2>インストラクターから探す</h2>
+                <div  class="instructor">
+                    <select onchange="location.href='./reserve.html'">
+                        <option>インストラクターを選択してください</option>
+                        <option value="1">インストラクターA</option>
+                        <option value="2">インストラクターB</option>
+                        <option value="3">インストラクターC</option>
+                    </select>
+                    <!-- <input type="button" onclick="location.href='./reserve.html'" value="検索する"> -->
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>カレンダーから探す</h2>
+                <div class="month cf">
+                    <p class="prev"><a href="#">前月</a></p>
+                    <p class="name">9月</p>
+                    <p class="next"><a href="#">次月</a></p>
+                </div>
+                <table class="cal">
+                <tbody>
+                <tr>
+                <th class="cal_sun">日</th>
+                <th class="cal_mon">月</th>
+                <th class="cal_tue">火</th>
+                <th class="cal_wed">水</th>
+                <th class="cal_thu">木</th>
+                <th class="cal_fri">金</th>
+                <th class="cal_sat">土</th>
+                </tr>
+                <tr>
+                <td class="cal_sun">&nbsp;</td>
+                <td class="cal_mon">&nbsp;</td>
+                <td class="cal_tue"><a href="reserve.html">1</a></td>
+                <td class="cal_wed"><a href="reserve.html">2</a></td>
+                <td class="cal_thu"><a href="reserve.html">3</a></td>
+                <td class="cal_fri"><a href="reserve.html">4</a></td>
+                <td class="cal_sat"><a href="reserve.html">5</a></td>
+                </tr>
+                <tr>
+                <td class="cal_sun"><a href="reserve.html">6</a></td>
+                <td class="cal_mon"><a href="reserve.html">7</a></td>
+                <td class="cal_tue"><a href="reserve.html">8</a></td>
+                <td class="cal_wed"><a href="reserve.html">9</a></td>
+                <td class="cal_thu"><a href="reserve.html">10</a></td>
+                <td class="cal_fri"><a href="reserve.html">11</a></td>
+                <td class="cal_sat"><a href="reserve.html">12</a></td>
+                </tr>
+                <tr>
+                <td class="cal_sun"><a href="reserve.html">13</a></td>
+                <td class="cal_mon"><a href="reserve.html">14</a></td>
+                <td class="cal_tue"><a href="reserve.html">15</a></td>
+                <td class="cal_wed"><a href="reserve.html">16</a></td>
+                <td class="cal_thu"><a href="reserve.html">17</a></td>
+                <td class="cal_fri"><a href="reserve.html">18</a></td>
+                <td class="cal_sat"><a href="reserve.html">19</a></td>
+                </tr>
+                <tr>
+                <td class="cal_sun"><a href="reserve.html">20</a></td>
+                <td class="cal_mon"><a href="reserve.html">21</a></td>
+                <td class="cal_tue"><a href="reserve.html">22</a></td>
+                <td class="cal_wed"><a href="reserve.html">23</a></td>
+                <td class="cal_thu"><a href="reserve.html">24</a></td>
+                <td class="cal_fri"><a href="reserve.html">25</a></td>
+                <td class="cal_sat"><a href="reserve.html">26</a></td>
+                </tr>
+                <tr>
+                <td class="cal_sun"><a href="reserve.html">27</a></td>
+                <td class="cal_mon"><a href="reserve.html">28</a></td>
+                <td class="cal_tue"><a href="reserve.html">29</a></td>
+                <td class="cal_wed"><a href="reserve.html">30</a></td>
+                <td class="cal_thu">&nbsp;</td>
+                <td class="cal_fri">&nbsp;</td>
+                <td class="cal_sat">&nbsp;</td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="foot">
+            <ul>
+                <li style="display:inline-block; width:25%; text-align:center; font-size:0.8rem;"><a href="" style="width:100%; height:100%;display:block;color:#959595;"><img src="img/home.png" width="32" height="32" alt="home"><br>HOME</a></li><!--
+                --><li style="display:inline-block; width:25%; text-align:center; font-size:0.8rem;"><a href="" style="width:100%; height:100%;display:block;color:#959595;border-left:1px solid #959595;"><img src="img/reserve.png" width="32" height="32" alt="予約"><br>予約</a></li><!--
+                --><li style="display:inline-block; width:25%; text-align:center; font-size:0.8rem;"><a href="" style="width:100%; height:100%;display:block;color:#959595;border-left:1px solid #959595;"><img src="img/member.png" width="32" height="32" alt=会員情報><br>会員情報</a></li><!--
+                --><li style="display:inline-block; width:25%; text-align:center; font-size:0.8rem;"><a href="" style="width:100%; height:100%;display:block;color:#959595;border-left:1px solid #959595;"><img src="img/info.png" width="32" height="32" alt="お知らせ"><br>お知らせ</a></li>
+            </ul>
+        </div>
+    </div>
+    </body>
+</html>
